@@ -107,7 +107,7 @@ input, select, textarea {
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 		color: #3fb1a3;
 		text-decoration: none;
-		border-bottom: dotted 1px;
+		
 	}
 
 		a:hover {
@@ -1870,6 +1870,49 @@ input, select, textarea {
 		}
 
 			.image.featured img {
+				display: block;
+				width: 100%;
+			}
+
+	.image-clean {
+		border: 0;
+		position: relative;
+		transition: 2s;
+	}
+		.image-clean:before {
+			content: '';
+			position: absolute;
+			top: 0; left: 0; bottom: 0; right: 0;
+			box-shadow: inset 0px 0px 30px black;
+			transition: .7s;
+		}
+
+		.image-clean:hover:before {
+			content: '';
+			position: absolute;
+			top: 0; left: 0; bottom: 0; right: 0;
+			box-shadow: inset 0px 0px 55px black;
+		}
+
+		.image-clean.fit {
+			transition: 2s;
+			display: block;
+		}
+
+			.image-clean.fit img {
+				transition: 2s;
+				display: block;
+				width: 100%;
+			}
+
+		.image-clean.featured {
+			transition: 2s;
+			display: block;
+			margin: 0 0 2em 0;
+		}
+
+			.image-clean.featured img {
+				transition: 2s;
 				display: block;
 				width: 100%;
 			}
